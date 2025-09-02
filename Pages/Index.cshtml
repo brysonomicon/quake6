@@ -1,9 +1,19 @@
 ﻿@page
+@using System.Diagnostics
+@using System.Xml.Serialization
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
+    Process[] processes = (Process[])Viewdata["ProcessCount"];
 }
 
 <div class="text-center">
-    <h1 class="display-4">Quad kill</h1>
+    <h1 class="display-4">Processes running on my computer</h1>
+    <ul>
+        @foreach (var process in processes)
+        {
+            <li>@process.ProcessName (ID: @process.Id</li>
+        }
+
+    </ul>
 </div>
