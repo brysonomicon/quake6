@@ -12,7 +12,10 @@
     <ul>
         @foreach (var process in processes)
         {
-            <li>@process.ProcessName (ID: @process.Id</li>
+            <tr>
+                <td>@process.ProcessName</td>
+                <td>@process.Id</td>
+            </tr>
         }
 
     </ul>
