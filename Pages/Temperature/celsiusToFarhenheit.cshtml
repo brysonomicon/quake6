@@ -16,6 +16,10 @@
             <button type="submit">Convert</button>
         </div>
     </form>
+    @if (ViewData["Result"] != null)
+    {
+        <h2>@ViewData["Result"]</h2>
+    }
 </div>
 
 
