@@ -1,0 +1,21 @@
+﻿@page
+@model Quake6.Pages.Temperature.celsiusToFarhenheitModel
+@{
+    ViewData["Title"] = "Celsius to Fahrenheit Converter";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <form method="post" action="/Temperature/celsiusToFarhenheit">
+        <div>
+            <label for="celsius">Celsius:</label>
+            <input type="number" id="celsius" name="celsius" step="any" required>   
+        </div>
+        <div>
+            <button type="submit">Convert</button>
+        </div>
+    </form>
+</div>
+
+
