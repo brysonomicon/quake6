@@ -1,0 +1,11 @@
+﻿@page
+@using System.Diagnostics
+@model Quake6.Pages.ProcessDetailsModel
+@{
+    Process? process = ViewData["ProcessInfo"] as Process;
+    if (process == null)
+    {
+        <text>Process not found.</text>
+        return;
+    }
+}
